@@ -1,0 +1,34 @@
+Build a polished personal portfolio website for an 
+experienced independent data, analytics and AI consultant, 
+trainer and practitioner. Use HTML, CSS and vanilla 
+JavaScript, responsive accessible design, and 
+free GitHub Pages hosting. Refer the MSRawat_Resume and Profile to get key details
+Position the person as an 
+individual professional with 20 years of experience, 
+B.Tech and MBA qualifications, consulting experience, 
+and expertise in data analytics, BI, data engineering, 
+data science, AI-enabled automation, training and mentoring. 
+Include Home, Services, Training & Workshops, Selected 
+Projects, Things I've Built, Experience & Expertise, 
+Ideas & Content, and Contact. Use a dark navy hero, 
+light content sections, blue #0066FF, green #00FF84 and 
+navy #211951. Keep it modern, distinctive, readable and
+ mobile-friendly; avoid generic AI visuals and excessive 
+ decoration. Link to the existing AI Resume Builder demo, 
+ GitHub, LinkedIn, YouTube, Calendly and Klaymatrix websites 
+ where appropriate; use placeholders for missing URLs and 
+ content. Inspect the project directory before editing and 
+ preserve unrelated files. Do not invent client names, 
+ qualifications, testimonials, outcomes or metrics. 
+ Do not publish confidential data, API keys or secrets. 
+ Work in stages: structure, styling, content/interactions, 
+ testing and GitHub Pages deployment. Explain setup steps simply.
+Additional Technical & UX Requirements:
+- Implement a fully responsive mobile hamburger menu using lightweight vanilla JavaScript.
+- Include smooth scrolling for anchor links and subtle focus states for keyboard accessibility.
+- Add Open Graph (OG) meta tags in the HTML <head> so social shares on LinkedIn and Twitter display a professional preview card.
+- Structure the CSS using modern CSS variables (custom properties) for easy color theme adjustments.
+
+When designing keep the structure as modular as possible:
+keep design, css separate - ex if color pallete needs to be changed, it can be done in future
+same with fonts - keep some flexibility in changing the  font in future

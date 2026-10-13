@@ -1,0 +1,273 @@
+# Personal Portfolio Website — Project Brief
+
+You can use the following as your project brief in VS Code with your AI coding agent. It consolidates the decisions, structure, content, and implementation plan.
+
+## 1. Project objective
+
+Build a professional personal portfolio website using HTML, CSS and JavaScript, developed locally in VS Code with AI assistance and hosted free on GitHub Pages.
+
+The website should position you as an experienced individual consultant, practitioner and trainer—not just as the owner of a company.
+
+Why a personal website? Some clients prefer to work directly with an experienced individual rather than engage a company. Your website should make it easy for them to understand your expertise, see your work, explore your training offerings and contact you.
+
+## 2. Personal positioning
+
+Use this as the initial positioning statement:
+
+Independent Consultant · Trainer · Data & AI Practitioner
+
+Suggested headline:
+
+> Helping businesses solve problems with data, analytics and AI—and helping professionals build practical skills.
+
+Highlight your:
+
+* B.Tech and MBA qualifications.
+
+* 20 years of professional experience.
+
+* Consulting and hands-on project experience.
+
+* Training, workshops and mentoring.
+
+* Work across analytics, data engineering, data science and AI-enabled automation.
+
+Keep your personal identity at the forefront. Mention Klaymatrix Data Labs as an associated business, but do not make it the main focus.
+
+## 3. Website structure
+
+![Alexander Weipprecht - Personal Brand | Provimedia](https://images.openai.com/static-rsc-4/TCsW8PTJTFD_2lmT1Yst2QLi5bsPbomTEa9PtXSq2MRXvqQ7iM4QwZRgACdVso-rEwbB_yTkWVkH3gQoYil2_U6OzHgL48WA8TS2hKn8HJZxfkYxVFDGQoeSh0MstJbxtmOFD1P5NwRXIyeocwZGtZdVTe1eEWvpZDABQopl_u0?purpose=inline)
+
+Add to Favorites
+
+1. Home / Hero
+
+Introduce yourself, your expertise and the value you offer.
+
+Include buttons for Discuss a Project, Explore Training, View Projects and Download Resume.
+
+![NeuraMonks - AI Solutions Company Website Rebuild :: Behance](https://images.openai.com/static-rsc-4/ef_sR6aM7EQZtCK4e46OqxTKwRN7ut-2ed6e-dMlH5WwRxffgu6S4be1zNEl4iyUDSDAZwtBGOn3aIRrkcYp8RrpaaXksquc7aCeOfrYSQcrSwY3EFJc3JKwfGSz02wrDOidBNninoqRbYcB0OFPogvUZB9TQCBtwycHYEV3Lzw?purpose=inline)
+
+Add to Favorites
+
+2. What I Do
+
+* Data Analytics and Business Intelligence
+
+* Data Engineering and Integration
+
+* Data Science and Predictive Modeling
+
+* AI-enabled Automation and Applications
+
+* Advisory and Project Support
+
+![Power BI Careers 2025: Complete Guide to Jobs, Salaries & Growth Opportunities](https://images.openai.com/static-rsc-4/2_5H-jymzRYchkxqd2Wtw20FrVSjA_zkkerYyuGzfNi0NDD79SxWCDF94LsD3ZYn_p2sV5RnEr6q5fGsQ1d0vydwWXigWfWebbEq3XuSqMcWyLyfCYac39Q-xQHEhOoN6IO8LN4VyR4gLggdYT1YqvBtH2ViqFZ3-5fQ9EPHBU0?purpose=inline)
+
+Add to Favorites
+
+3. Training & Workshops
+
+Highlight corporate training, customized workshops, practical learning and mentoring in Power BI, analytics, Python, data science and applied AI.
+
+![How I Built a Data Analytics Portfolio on GitHub Pages While Changing Careers | by Ria Singh | Mar, 2026 | Medium](https://images.openai.com/static-rsc-4/jZXLyFvG076-OUNKN_-weA6pV-eJdGEfB9194-IxUFBeWQNEpeDlSu3Fd0BAeffubHlWpx_BvDs_rHUklkjEC-aQ8-LEK6z7HsiDDzB7GDnZ80kfou7-B7avpIJ0cbhlyYbx2CF-mT_40GMfLRtJ8WzmHAUlICmqclMd-welzQE?purpose=inline)
+
+Add to Favorites
+
+4. Selected Projects
+
+Feature 3–6 strong examples. For each, explain the problem, your contribution, the solution, its value and the technologies used. Link to a demo or public repository where possible.
+
+![Resumind - Resume Builder with AI-Powered by Akhmad Maariz for dpopstudio on Dribbble](https://images.openai.com/static-rsc-4/pEaM9g09zc2wZa53XAZNjFpfagEKCi4PnHiD-CoQF7tExFhZm4xOVJJG6LFLc_9maU-YgeIWvu2-iNDw31YVf86AUwcT_36kQrtPaOO8DbvRCd0qTGa6fBhebXf1ozcpWN-Ek-m63nwDIOaijD9Yl98sfZB2JaGZzTjnEc5KoWc?purpose=inline)
+
+Add to Favorites
+
+5. Things I've Built
+
+Showcase your AI Resume Builder, Streamlit applications and other experiments. Label projects clearly as prototypes, experiments or production work.
+
+![Dominik Lukeš - AI Consultant, Researcher & Educator](https://images.openai.com/static-rsc-4/0zByjyLOkQkdTWNRG-PS0GUwkMD3a2nSXmryRi-CitpWXt3KSzm-XL3sO3CNQYtQj2bV8Pf3PragCiVKSQCPF9SXHJFG8SfTvdjUYL3pxYzG0fICsd_lvF1FjzYj20kQfiDr-XAJOd1i4j1r4ND47zvFxbZ7dFQ1A0nvPEuweq0?purpose=inline)
+
+Add to Favorites
+
+6. Experience & Expertise
+
+Summarize your professional background, industry experience, technical capabilities, education and mentoring experience.
+
+![Professional Personal Website Template That Grows Your Audience (Substack + YouTube Ready)](https://images.openai.com/static-rsc-4/DD3V7l8kVkk6gUdAIeO-ZE815pV7Uxw47hOV3gMCh9ciJT9QXDK2wj8GsJRyQmiL-_R_j26MGXvvgRJ7UqhxO4vkQNQz6nnfYTWJD6WsfycdPMRhpx-Rd-39WQVFscg7VUcETvwAF-NuowFR3ICEMGnlmYS-VBwH50vzZvmuH_E?purpose=inline)
+
+Add to Favorites
+
+7. Ideas & Content
+
+Link to selected YouTube videos from Data Science with Manu, articles, practical AI demonstrations and educational resources.
+
+![Consult Pro (Dark) - Webflow Ecommerce website template](https://images.openai.com/static-rsc-4/O49joz6KONnzqL1LdYwE-jCRQFjnatpHnB7ZODKspR3Oiq6FJD7RyX_pqxYjq8ukcYOCYwwO_dE6TVbrMS-yJL7drEGmoOkJw5HgvdvIVHVyepY21cVtHpc9_nRw853AsV2SWlt687o1d20IZC7PD_5oAthrE6apdlonMWANDM0?purpose=inline)
+
+Add to Favorites
+
+8. Contact
+
+Provide email, LinkedIn, GitHub and your Calendly booking link. Include a discreet link to Klaymatrix Data Labs.
+
+## 4. Existing assets to connect
+
+Use your existing work to make the portfolio credible and practical.
+
+| Asset                  | How to use it                                                                                    |
+| ---------------------- | ------------------------------------------------------------------------------------------------ |
+| AI Resume Builder      | Live demo: [ai-resume-builder-manu.streamlit.app](https://ai-resume-builder-manu.streamlit.app/) |
+| GitHub account         | Link to selected repositories and prototypes                                                     |
+| LinkedIn profile       | Professional background, networking and contact                                                  |
+| Data Science with Manu | Selected videos and educational content                                                          |
+| Klaymatrix website     | Link for company-led consulting services                                                         |
+| Academy website        | Link for self-paced training courses                                                             |
+| Calendly               | Enable visitors to schedule a discussion                                                         |
+
+Choose only your strongest projects for the main page. More projects can be listed on a separate projects page or linked through GitHub.
+
+## 5. Design direction
+
+Aim for a polished, professional, contemporary consulting portfolio.
+
+* Primary colors: Blue `#0066FF`, green `#00FF84`, navy `#211951`.
+
+* Hero: Dark navy background with a clear headline, short introduction and prominent calls to action.
+
+* Content sections: Light or neutral backgrounds with clean typography and ample spacing.
+
+* Layout: Responsive project cards, clear section hierarchy and mobile-friendly navigation.
+
+* Visual style: Professional, technical and distinctive, without looking like a generic AI-generated website.
+
+* Accessibility: Readable contrast, semantic HTML, keyboard-friendly navigation and meaningful image descriptions.
+
+Avoid excessive animations, decorative icons, unsupported performance statistics, invented testimonials and long lists of technical buzzwords.
+
+## 6. Technology and hosting
+
+Keep the first version simple and free.
+
+| Component       | Recommendation                                                          |
+| --------------- | ----------------------------------------------------------------------- |
+| Editor          | VS Code                                                                 |
+| AI assistance   | Your preferred AI coding agent                                          |
+| Front end       | HTML, CSS and vanilla JavaScript                                        |
+| Version control | Git and GitHub                                                          |
+| Hosting         | GitHub Pages                                                            |
+| Forms           | Start with email or a `mailto:` link; add a form service only if needed |
+| Backend         | Not required initially                                                  |
+| Framework       | No need for React or Next.js for this static portfolio                  |
+
+### Suggested project structure
+
+```
+personal-portfolio/
+├── index.html
+├── css/
+│   └── style.css
+├── js/
+│   └── main.js
+├── assets/
+│   ├── images/
+│   └── icons/
+├── resume/
+│   └── resume.pdf
+└── README.md
+```
+
+Start with one well-designed page. Add separate project or article pages only when there is enough content to justify them.
+
+## 7. GitHub setup
+
+Use your existing GitHub account.
+
+1. Create a repository named `yourusername.github.io`, replacing `yourusername` with your actual GitHub username.
+
+2. Build and test the website locally in VS Code.
+
+3. Push the files to that repository.
+
+4. Enable GitHub Pages in the repository settings.
+
+5. Test the published website on desktop and mobile.
+
+Your website will normally be available at:
+
+`https://yourusername.github.io/`
+
+You can add a custom personal domain later. A separate personal domain may be preferable if you want the portfolio to stand independently of Klaymatrix.
+
+Also create or improve your GitHub profile README in a repository named exactly after your GitHub username. Keep it short, with your introduction, featured projects and links to your portfolio, LinkedIn and demos.
+
+## 8. Keep your personal and company brands distinct
+
+| Personal portfolio                           | Klaymatrix Data Labs                           |
+| -------------------------------------------- | ---------------------------------------------- |
+| Direct access to you                         | Company identity and services                  |
+| Individual consulting and project work       | Company-led or larger engagements              |
+| Training, workshops and mentoring            | Academy and structured training offerings      |
+| Personal projects, experiments and expertise | Company service pages and business information |
+| Your professional story                      | The broader business proposition               |
+
+They should complement each other rather than duplicate each other.
+
+## 9. Implementation plan
+
+Follow this sequence rather than asking the AI agent to build everything at once.
+
+1. Prepare the content. Confirm your name, headline, contact links, resume and the 3–6 projects you want to feature.
+
+2. Create the page structure. Ask the agent to build the semantic HTML sections and navigation first.
+
+3. Develop the visual design. Add the responsive layout, colors, typography, project cards and mobile navigation.
+
+4. Add real content and links. Connect your demos, repositories, LinkedIn, YouTube, Calendly and company website.
+
+5. Test locally. Check mobile layouts, broken links, image loading, navigation, accessibility and the resume download.
+
+6. Publish using GitHub Pages. Verify the live URL, then refine the content and design based on feedback.
+
+## 10. Instructions to give your VS Code AI coding agent
+
+Copy and paste the following into your coding agent:
+
+Project instructions
+
+Build a polished personal portfolio website for an experienced independent data, analytics and AI consultant, trainer and practitioner.
+
+Use HTML, CSS and vanilla JavaScript. The website must be responsive, accessible, fast-loading and suitable for free GitHub Pages hosting. Do not introduce a backend or framework unless there is a clear need.
+
+Position the person as an individual professional with 20 years of experience, B.Tech and MBA qualifications, consulting experience, and a focus on data analytics, business intelligence, data engineering, data science, AI-enabled automation, training and mentoring.
+
+Create sections for Home, Services, Training & Workshops, Selected Projects, Things I've Built, Experience & Expertise, Ideas & Content, and Contact.
+
+Use a professional dark navy hero, light content sections, blue `#0066FF`, green `#00FF84` and navy `#211951`. Keep the design modern, distinctive, readable and mobile-friendly. Avoid generic AI visuals and excessive decorative elements.
+
+Include links to the existing AI Resume Builder demo, GitHub, LinkedIn, YouTube, Calendly and Klaymatrix websites where appropriate. Use clearly identified placeholders for missing URLs and content.
+
+Before editing, inspect the existing project directory and preserve unrelated files. Do not invent client names, qualifications, testimonials, project outcomes or metrics. Do not publish confidential client data, API keys or other secrets.
+
+Build the website in stages: first structure, then styling, then content and interactions, then testing and GitHub Pages deployment. Explain any required setup steps in simple terms.
+
+Copy project instructions
+
+## 11. Portfolio inspiration
+
+These are useful starting points for reviewing different portfolio styles and layouts:
+
+* [Harrison Jansma](https://harrisonjansma.com/) — data science portfolio.
+
+* [Daniel Simpson](https://danielbsimpson.github.io/?utm_source=chatgpt.com) — personal portfolio.
+
+* [Natassha Selvaraj](https://natassha.github.io/natasshaselvaraj/) — data-focused portfolio.
+
+* [James Klee](https://jameskle.com/) — personal website and writing.
+
+* [Sajal Sharma](https://sajalsharma.com/) — professional portfolio.
+
+* [Data analytics portfolio examples](https://colorlib.com/wp/data-science-portfolio-examples/?utm_source=chatgpt.com) — additional design ideas.
+
+Use them for inspiration, not as templates to copy directly.
+
+My recommendation: Build a single, high-quality personal landing page first. Make your experience, direct consulting availability, training offerings and 3–6 credible projects immediately visible. Once it is published and working, improve your GitHub profile and expand the portfolio gradually.
