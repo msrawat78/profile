@@ -329,7 +329,11 @@ p:last-child {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(160deg, var(--color-navy-deep) 0%, var(--color-navy) 40%, var(--color-navy-light) 100%);
+  background-color: var(--color-navy-deep);
+  background-image: url('../assets/images/msr_github.jpg');
+  background-position: center, center center;
+  background-size: cover;
+  background-repeat: no-repeat;
   position: relative;
   overflow: hidden;
   padding-top: 72px;
@@ -346,6 +350,7 @@ p:last-child {
   background: radial-gradient(circle, rgba(0, 102, 255, 0.08) 0%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
+  display: none;
 }
 
 .hero::after {
@@ -358,15 +363,27 @@ p:last-child {
   background: radial-gradient(circle, rgba(0, 255, 132, 0.05) 0%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
+  display: none;
 }
 
 .hero__container {
   position: relative;
   z-index: 1;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .hero__content {
-  max-width: 780px;
+  max-width: 740px;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  margin-right: auto;
+  text-align: left;
+  background: linear-gradient(90deg, rgba(24, 16, 61, .72), rgba(24, 16, 61, .82));
+  border: 1px solid rgba(255, 255, 255, .08);
+  border-radius: var(--border-radius-xl);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .16);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
 }
 
 .hero__label {
@@ -382,10 +399,12 @@ p:last-child {
 }
 
 .hero__name {
-  font-size: var(--text-6xl);
+  font-size: clamp(1.65rem, 4vw, 3.4rem);
   font-weight: 800;
   color: var(--color-white);
   line-height: 1.05;
+  white-space: nowrap;
+  letter-spacing: -0.04em;
   margin-bottom: var(--space-lg);
   opacity: 0;
   animation: fadeInUp 0.6s ease forwards 0.4s;
@@ -1332,6 +1351,19 @@ p:last-child {
 
 .btn__icon {
   font-size: 1.1em;
+  display: inline-flex;
+  align-items: center;
+}
+
+.ph { line-height: 1; }
+
+@media (max-width: 760px) {
+  .hero {
+    background-position: center, center center;
+  }
+  .hero__container { padding-block: var(--space-3xl); }
+  .hero__content { padding: var(--space-xl); }
+  .hero__name { font-size: clamp(1.15rem, 6vw, 2rem); }
 }
 
 

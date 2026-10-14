@@ -73,7 +73,8 @@
   };
 
   function getIcon(name) {
-    return ICONS[name] || '●';
+    const names = { calendar: 'calendar-blank', education: 'graduation-cap', code: 'code', download: 'file-arrow-down', 'chart-bar': 'chart-bar', database: 'database', brain: 'brain', robot: 'robot', handshake: 'handshake', email: 'envelope', phone: 'phone', linkedin: 'linkedin-logo', github: 'github-logo', youtube: 'youtube-logo', link: 'link', 'file-text': 'file-text' };
+    return '<i class="ph ph-' + (names[name] || 'circle') + '" aria-hidden="true"></i>';
   }
 
 
@@ -130,6 +131,7 @@
 
       var a = createElement('a', styleClass, '');
       a.href = btn.link;
+      if (btn.target) { a.target = btn.target; a.rel = 'noopener noreferrer'; }
 
       if (btn.link.startsWith('http') || btn.link.startsWith('mailto')) {
         a.target = '_blank';
@@ -261,7 +263,7 @@
         pubsHtml = '<div class="project-card__publications">' +
           '<div class="project-card__pub-label">Published Reports</div>' +
           '<ul class="project-card__pub-list">' +
-            project.publications.map(function (p) { return '<li>' + escapeHtml(p) + '</li>'; }).join('') +
+            project.publications.map(function (p) { return '<li>' + escapeHtml(p) + '<div class="publication-item__meta">Contributor</div></li>'; }).join('') +
           '</ul>' +
           '</div>';
       }
@@ -315,11 +317,11 @@
       var linksHtml = '<div class="built-card__links">';
       if (item.demoUrl) {
         linksHtml += '<a href="' + escapeAttr(item.demoUrl) + '" class="btn btn--sm btn--outline-dark" target="_blank" rel="noopener noreferrer">' +
-          '<span class="btn__icon">🔗</span><span>Live Demo</span></a>';
+          '<span class="btn__icon">' + getIcon('link') + '</span><span>Live Demo</span></a>';
       }
       if (item.repoUrl) {
         linksHtml += '<a href="' + escapeAttr(item.repoUrl) + '" class="btn btn--sm btn--outline-dark" target="_blank" rel="noopener noreferrer">' +
-          '<span class="btn__icon">⌨️</span><span>GitHub</span></a>';
+          '<span class="btn__icon">' + getIcon('github') + '</span><span>GitHub</span></a>';
       }
       linksHtml += '</div>';
 
@@ -416,6 +418,7 @@
         var el = createElement('div', 'publication-item', '');
         var meta = escapeHtml(pub.publisher) + ', ' + escapeHtml(pub.year);
         if (pub.note) meta += ' (' + escapeHtml(pub.note) + ')';
+        meta += ' · Contributor';
         el.innerHTML =
           '<div class="publication-item__title">' + escapeHtml(pub.title) + '</div>' +
           '<div class="publication-item__meta">' + meta + '</div>';
@@ -464,7 +467,7 @@
       channelLink.target = '_blank';
       channelLink.rel = 'noopener noreferrer';
       channelLink.innerHTML =
-        '<span class="yt-icon">▶️</span>' +
+        '<span class="yt-icon">' + getIcon('youtube') + '</span>' +
         '<span>' + escapeHtml(ideasData.youtube.channelName) + ' — YouTube Channel</span>';
       ytSection.appendChild(channelLink);
 
@@ -522,7 +525,7 @@
     if (contactData.email) {
       infoCol.innerHTML +=
         '<div class="contact__item">' +
-          '<div class="contact__item-icon">✉️</div>' +
+          '<div class="contact__item-icon">' + getIcon('email') + '</div>' +
           '<div class="contact__item-text"><a href="mailto:' + escapeAttr(contactData.email) + '">' + escapeHtml(contactData.email) + '</a></div>' +
         '</div>';
     }
@@ -531,7 +534,7 @@
     if (contactData.phone) {
       infoCol.innerHTML +=
         '<div class="contact__item">' +
-          '<div class="contact__item-icon">📱</div>' +
+          '<div class="contact__item-icon">' + getIcon('phone') + '</div>' +
           '<div class="contact__item-text"><a href="tel:' + escapeAttr(contactData.phone.replace(/[^+\d]/g, '')) + '">' + escapeHtml(contactData.phone) + '</a></div>' +
         '</div>';
     }
@@ -579,7 +582,7 @@
       '<div class="contact__cta-label">' + escapeHtml(contactData.calendlyLabel || 'Book a Discussion') + '</div>' +
       '<p class="contact__cta-sub">No pitch, no obligation — just a focused conversation about your data challenges.</p>' +
       '<a href="' + escapeAttr(contactData.calendly) + '" class="btn btn--primary" target="_blank" rel="noopener noreferrer">' +
-        '<span class="btn__icon">📅</span>' +
+        '<span class="btn__icon">' + getIcon('calendar') + '</span>' +
         '<span>Schedule a Call</span>' +
       '</a>';
     container.appendChild(ctaBox);

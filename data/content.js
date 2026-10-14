@@ -37,7 +37,6 @@ window.SITE_DATA = {
       { label: "Discuss a Project",    link: "https://calendly.com/klaymatrix-support/30min", icon: "calendar",  style: "primary" },
       { label: "Explore Training",     link: "#training",                                     icon: "education", style: "secondary" },
       { label: "View Projects",        link: "#projects",                                     icon: "code",      style: "outline" },
-      { label: "Download Resume",      link: "resume/MSRawat_Resume.pdf",                     icon: "download",  style: "outline" },
     ],
     // Photo / headshot — add path when available
     photo: "assets/images/profile-photo.jpg", // UPDATE: add your professional photo
