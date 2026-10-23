@@ -29,12 +29,12 @@ window.SITE_DATA = {
   hero: {
     name: "Manvirender Singh Rawat",
     shortName: "Manu",
-    title: "Independent Consultant · Trainer · Data & AI Practitioner",
-    headline: "Helping businesses solve problems with data, analytics and AI—and helping professionals build practical skills.",
-    subtext: "18+ years of experience across analytics strategy, AI/LLM implementation, business intelligence, and enterprise-wide digital transformation. Fractional data leader for startups and mid-sized companies. 10,000+ professionals trained.",
+    title: "Fractional CDO | Data & AI Transformation",
+    headline: "Turn Messy Data Into Trusted Decisions - Without the Agency Overhead.",
+    subtext: "Helping growing companies build automated BI infrastructure, scalable data pipelines, and production-ready AI workflows in weeks, not months. 18+ years of enterprise transformation experience and 10,000+ professionals trained.",
     availability: "Remote / Hybrid / Fractional / Full-time",
     ctaButtons: [
-      { label: "Discuss a Project",    link: "https://calendly.com/klaymatrix-support/30min", icon: "calendar",  style: "primary" },
+      { label: "Book a 20-minute Strategy Call", link: "https://calendly.com/klaymatrix-support/30min", icon: "calendar",  style: "primary" },
       { label: "Explore Training",     link: "#training",                                     icon: "education", style: "secondary" },
       { label: "View Projects",        link: "#projects",                                     icon: "code",      style: "outline" },
     ],
@@ -67,12 +67,16 @@ window.SITE_DATA = {
     sectionIntro: "Looking for a senior practitioner without the layers of a traditional agency? I partner directly with teams for rapid advisory sprints, custom data/AI architecture, and hands-on corporate training.",
     engagementPaths: [
       {
-        title: "Advisory & Consulting",
-        description: "Sprint-based or milestone-driven problem-solving across data engineering, AI automation, predictive modeling, and analytics strategy.",
+        title: "Data & BI Architecture Audit - 1 Week",
+        description: "Review your stack, bottlenecks, and spreadsheet-heavy workflows; receive a prioritized architecture roadmap and cost-efficiency plan.",
       },
       {
-        title: "Workshops & Training",
-        description: "Custom corporate bootcamps, masterclasses, and hands-on cohorts in Python, Power BI, Data Science, and Applied AI.",
+        title: "AI Automation & LLM Jumpstart - 2 Weeks",
+        description: "Scope and build a working LLM or automation prototype inside your environment, with a clear path to production.",
+      },
+      {
+        title: "Fractional CDO / Analytics Leadership",
+        description: "Ongoing part-time data leadership: strategy, team direction, governance, architecture decisions, and delivery oversight.",
       },
     ],
     items: [
@@ -80,30 +84,35 @@ window.SITE_DATA = {
         title: "Data Analytics & Business Intelligence",
         description: "KPI dashboards, MIS reporting, Power BI, SAP Analytics Cloud, Tableau. Building a single source of truth your org actually believes.",
         icon: "chart-bar",
+        audiences: ["startup", "enterprise", "technical"], solutions: ["analytics"],
         keywords: ["Power BI", "Tableau", "SAP Analytics Cloud", "Spotfire", "KPI Dashboards"],
       },
       {
         title: "Data Engineering & Integration",
         description: "ETL pipelines, Azure Data Factory, medallion architecture, API integrations. Migrating fragile Excel dependencies into structured, automated BI.",
         icon: "database",
+        audiences: ["enterprise", "technical"], solutions: ["analytics", "ai"],
         keywords: ["Azure Data Factory", "ETL Pipelines", "Medallion Architecture", "PostgreSQL", "MySQL"],
       },
       {
         title: "Data Science & Predictive Modeling",
         description: "Regression, classification, neural networks, time series, statistical modelling. Turning data into decisions with rigorous methodology.",
         icon: "brain",
+        audiences: ["startup", "enterprise", "technical"], solutions: ["analytics", "ai"],
         keywords: ["Scikit-learn", "Python", "R", "Statistical Modelling", "Time Series"],
       },
       {
         title: "AI-Enabled Automation & Applications",
         description: "LLM orchestration, ChatGPT API and Claude API integration, prompt engineering, Power BI + Claude automation for intelligent reporting.",
         icon: "robot",
+        audiences: ["startup", "enterprise", "technical"], solutions: ["ai"],
         keywords: ["LLM Orchestration", "ChatGPT API", "Claude API", "Prompt Engineering"],
       },
       {
         title: "Advisory & Project Support",
         description: "Solution architecture, technical proposals, effort estimation, pre-sales support, and fractional CDO engagements for growing companies.",
         icon: "handshake",
+        audiences: ["startup", "enterprise"], solutions: ["ai", "analytics"],
         keywords: ["Solution Architecture", "Pre-sales", "Fractional CDO", "Agile Delivery"],
       },
     ],
@@ -117,7 +126,7 @@ window.SITE_DATA = {
     sectionIntro: "Practical, hands-on training designed for working professionals. No slides-only sessions — every workshop involves real data, real tools, and real problem-solving.",
     highlights: [
       "10,000+ professionals trained across corporate, academic, and government settings",
-      "Faculty at TISS Mumbai for 7+ years — Data Science curriculum for postgraduate cohorts",
+      "Visiting faculty at TISS Mumbai for 7+ years — Data Science curriculum for postgraduate cohorts",
       "Visiting Faculty at SCMHRD Pune",
       "Lead Trainer for national-level government workshops (MoHFW / WHO / FHI 360)",
       "Corporate hackathon design and facilitation",
@@ -162,7 +171,7 @@ window.SITE_DATA = {
    * ---------------------------------------------------------- */
   projects: {
     sectionTitle: "Selected Projects",
-    sectionIntro: "A selection of consulting and advisory projects. Each involved direct hands-on work — architecture, code, delivery, and stakeholder management.",
+    sectionIntro: "Selected hands-on engagements framed around the challenge, delivery, and outcome. Tools and platforms are listed on every project.",
     items: [
       {
         title: "Enterprise BI Infrastructure & Analytics Function",
@@ -172,6 +181,7 @@ window.SITE_DATA = {
         problem: "Organization needed a complete data analytics function — from architecture to BI infrastructure to delivery governance.",
         contribution: "Owned end-to-end analytics: designed Azure-based pipelines, built Power BI reporting on medallion architecture, created SAP Analytics Cloud reports, and implemented Power BI + Claude API automation.",
         tech: ["Azure Data Factory", "Power BI", "SAP Analytics Cloud", "SAP SuccessFactors", "Claude API", "Medallion Architecture"],
+        audiences: ["enterprise", "technical"], solutions: ["analytics", "ai"],
         type: "consulting",
         // demoUrl: "",  // Add if available
         // repoUrl: "",  // Add if available
@@ -184,6 +194,7 @@ window.SITE_DATA = {
         problem: "Multiple organizations needed analytics capabilities — from data engineering to production AI deployments — without hiring full teams.",
         contribution: "Built analytics practice from scratch. Led technical pre-sales, designed solution architectures, developed Python + ChatGPT API orchestration pipelines, deployed production AWS environments. Clients included Ernst & Young India, Microsave Consulting, Mergermarkets/Acuris, ORATS (USA).",
         tech: ["Python", "ChatGPT API", "AWS EC2", "Load Balancer", "Route 53", "Power BI"],
+        audiences: ["startup", "enterprise", "technical"], solutions: ["analytics", "ai"],
         type: "consulting",
       },
       {
@@ -194,6 +205,7 @@ window.SITE_DATA = {
         problem: "India needed its first national health accounts — requiring configuration of WHO's global data production tool, massive data aggregation, and policy dashboards for government decision-makers.",
         contribution: "Configured WHO global data production tool for India. Designed automated aggregation pipelines and validation frameworks. Built policy dashboard. Contributed to flagship published Government of India reports.",
         tech: ["Python", "Data Pipelines", "Dashboard Design", "WHO Data Tools"],
+        audiences: ["enterprise", "technical"], solutions: ["analytics"],
         type: "consulting",
         publications: [
           "National Health Accounts Estimates for India 2013–14",
@@ -209,6 +221,7 @@ window.SITE_DATA = {
         problem: "A national strategic information program needed data collection systems, automated file generation, dashboards, and data triangulation to strengthen cluster-level information systems.",
         contribution: "Designed data collection system, automated data file generation, built dashboards, and led data triangulation and situation analysis.",
         tech: ["Data Architecture", "Dashboard Design", "Automated Reporting"],
+        audiences: ["enterprise", "technical"], solutions: ["analytics"],
         type: "consulting",
       },
       {
@@ -217,8 +230,9 @@ window.SITE_DATA = {
         role: "Data Consultant",
         period: "2012 – 2015",
         problem: "National program needed database architecture covering 600+ geographic units with automated state-level reporting — replacing entirely manual processes.",
-        contribution: "Designed national-scale database architecture, automated state-level report generation eliminating manual effort, delivered national-level training for government M&E officers and epidemiologists.",
+        contribution: "Designed national-scale database architecture and automated state-level report generation across 600+ geographic units, replacing entirely manual processes. Delivered national-level training for government M&E officers and epidemiologists.",
         tech: ["Database Architecture", "Python", "Automated Reporting", "Training"],
+        audiences: ["enterprise", "technical"], solutions: ["analytics", "training"],
         type: "consulting",
       },
       {
@@ -229,6 +243,7 @@ window.SITE_DATA = {
         problem: "A premier options analytics vendor needed quantitative tools for index-based research and dividend computation.",
         contribution: "Developed quantitative tools for index options research, designed dividend computation algorithm, set up cloud VM environments.",
         tech: ["Python", "Quantitative Finance", "Cloud VMs", "Algorithm Design"],
+        audiences: ["startup", "technical"], solutions: ["analytics", "ai"],
         type: "consulting",
       },
     ],
@@ -239,7 +254,7 @@ window.SITE_DATA = {
    * ---------------------------------------------------------- */
   built: {
     sectionTitle: "Things I've Built",
-    sectionIntro: "Side projects, experiments, and tools — some production, some prototypes. All built hands-on.",
+    sectionIntro: "Hands-on AI tools and interactive dashboards — some production, some prototypes. All built hands-on.",
     items: [
       {
         title: "AI Resume Builder",
@@ -270,17 +285,18 @@ window.SITE_DATA = {
 
     timeline: [
       {
-        role: "Head of Data Analytics (Fractional)",
-        org: "PPN Solutions",
-        period: "Sep 2023 – May 2026",
-        type: "fractional",
-      },
-      {
         role: "Founder & Head of Data Science",
         org: "Klaymatrix Data Labs",
         period: "Apr 2017 – Present",
         type: "founder",
       },
+      {
+        role: "Head of Data Analytics (Fractional)",
+        org: "PPN Solutions",
+        period: "Sep 2023 – May 2026",
+        type: "fractional",
+      },
+      
       {
         role: "Head of Data Science",
         org: "Cynoteck Technology Solutions",

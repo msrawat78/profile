@@ -23,6 +23,7 @@
     renderTraining(data.training);
     renderProjects(data.projects);
     renderBuilt(data.built);
+    renderDashboards();
     renderExperience(data.experience);
     renderIdeas(data.ideas);
     renderContact(data.contact);
@@ -32,6 +33,95 @@
     initScrollHeader();
     initRevealAnimations();
     initActiveNavHighlight();
+    initPortfolioEnhancements();
+  }
+
+  function initPortfolioEnhancements() {
+    var selections = { audience: 'all', solution: 'all' };
+    var filterButtons = document.querySelectorAll('.filter-chip');
+    var status = document.getElementById('solution-finder-status');
+    var filterTargets = document.querySelectorAll('.service-card, .training-card, .project-card');
+    var labels = { startup: 'startup founders', enterprise: 'enterprise leaders', technical: 'technical teams', ai: 'AI & automation', analytics: 'data analytics', training: 'corporate training' };
+
+    function applyFilters() {
+      var visible = 0;
+      filterTargets.forEach(function (card) {
+        var audiences = (card.dataset.audiences || '').split(' ');
+        var solutions = (card.dataset.solutions || '').split(' ');
+        var matchesAudience = selections.audience === 'all' || audiences.indexOf(selections.audience) !== -1;
+        var matchesSolution = selections.solution === 'all' || solutions.indexOf(selections.solution) !== -1;
+        var show = matchesAudience && matchesSolution;
+        card.classList.toggle('filter-hidden', !show);
+        if (show) visible++;
+      });
+      if (status) {
+        var context = [];
+        if (selections.audience !== 'all') context.push(labels[selections.audience]);
+        if (selections.solution !== 'all') context.push(labels[selections.solution]);
+        status.textContent = context.length ? 'Showing ' + visible + ' relevant items for ' + context.join(' · ') : 'Showing all services, training and projects';
+      }
+    }
+
+    filterButtons.forEach(function (button) {
+      button.addEventListener('click', function () {
+        var group = button.dataset.filterGroup;
+        selections[group] = button.dataset.filterValue;
+        filterButtons.forEach(function (item) {
+          if (item.dataset.filterGroup === group) {
+            var active = item === button;
+            item.classList.toggle('is-active', active);
+            item.setAttribute('aria-pressed', String(active));
+          }
+        });
+        applyFilters();
+      });
+    });
+
+    var themeToggle = document.getElementById('theme-toggle');
+    var savedTheme = null;
+    try { savedTheme = localStorage.getItem('msr-theme'); } catch (error) { /* Storage may be unavailable in private contexts. */ }
+    if (savedTheme === 'light') document.body.dataset.theme = 'light';
+    function updateThemeControl() {
+      if (!themeToggle) return;
+      var isDark = document.body.dataset.theme !== 'light';
+      themeToggle.textContent = isDark ? 'Light' : 'Dark';
+      themeToggle.setAttribute('aria-label', 'Switch to ' + (isDark ? 'light' : 'dark') + ' theme');
+    }
+    updateThemeControl();
+    if (themeToggle) themeToggle.addEventListener('click', function () {
+      document.body.dataset.theme = document.body.dataset.theme === 'light' ? 'dark' : 'light';
+      try { localStorage.setItem('msr-theme', document.body.dataset.theme); } catch (error) { /* Theme still works for this visit. */ }
+      updateThemeControl();
+    });
+
+    var logs = [
+      '[READY] Exploring practical data and AI solutions',
+      '[FOCUS] Analytics · automation · team enablement',
+      '[OPEN] Available for advisory and delivery engagements'
+    ];
+    var log = document.getElementById('pipeline-log');
+    var logIndex = 0;
+    if (log && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      window.setInterval(function () {
+        logIndex = (logIndex + 1) % logs.length;
+        log.classList.add('pipeline-ticker__log--changing');
+        window.setTimeout(function () { log.textContent = logs[logIndex]; log.classList.remove('pipeline-ticker__log--changing'); }, 180);
+      }, 4200);
+    }
+
+    if (window.matchMedia('(hover: hover) and (pointer: fine)').matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.querySelectorAll('.project-card, .service-card, .built-card').forEach(function (card) {
+        card.addEventListener('pointermove', function (event) {
+          var bounds = card.getBoundingClientRect();
+          var x = (event.clientX - bounds.left) / bounds.width - .5;
+          var y = (event.clientY - bounds.top) / bounds.height - .5;
+          card.style.setProperty('--tilt-x', (y * -2.2).toFixed(2) + 'deg');
+          card.style.setProperty('--tilt-y', (x * 2.2).toFixed(2) + 'deg');
+          card.classList.add('tilt-active');
+        });
+        card.addEventListener('pointerleave', function () { card.classList.remove('tilt-active'); });
+      });
+    }
   }
 
 
@@ -178,6 +268,8 @@
     if (gridContainer && servicesData.items) {
       servicesData.items.forEach(function (item) {
         var card = createElement('div', 'service-card reveal', '');
+        card.dataset.audiences = (item.audiences || []).join(' ');
+        card.dataset.solutions = (item.solutions || []).join(' ');
 
         var keywordsHtml = '';
         if (item.keywords) {
@@ -222,6 +314,8 @@
     if (gridContainer && trainingData.offerings) {
       trainingData.offerings.forEach(function (item) {
         var card = createElement('div', 'training-card reveal', '');
+        card.dataset.audiences = (item.audiences || ['startup', 'enterprise', 'technical']).join(' ');
+        card.dataset.solutions = 'training';
         card.innerHTML =
           '<h3 class="training-card__title">' + escapeHtml(item.title) + '</h3>' +
           '<p class="training-card__desc">' + escapeHtml(item.description) + '</p>' +
@@ -250,6 +344,8 @@
 
     projectsData.items.forEach(function (project) {
       var card = createElement('div', 'project-card reveal', '');
+      card.dataset.audiences = (project.audiences || []).join(' ');
+      card.dataset.solutions = (project.solutions || []).join(' ');
 
       var techHtml = '';
       if (project.tech) {
@@ -280,7 +376,7 @@
           '<p class="project-card__section-text">' + escapeHtml(project.problem) + '</p>' +
         '</div>' +
         '<div class="project-card__section">' +
-          '<div class="project-card__section-label">Contribution</div>' +
+          '<div class="project-card__section-label">Solution & Outcome</div>' +
           '<p class="project-card__section-text">' + escapeHtml(project.contribution) + '</p>' +
         '</div>' +
         techHtml +
@@ -334,6 +430,45 @@
 
       gridContainer.appendChild(card);
     });
+  }
+
+  function renderDashboards() {
+    var grid = document.getElementById('dashboard-grid');
+    if (!grid) return;
+    var dashboards = [
+      { title: 'Stock Tracker', image: 'stock-tracker.png', url: 'https://app.powerbi.com/view?r=eyJrIjoiYmUyYjViMDItMTIxNy00NTU3LTliM2UtNWFkMWViYjExZGRjIiwidCI6Ijc0MTdhZmNkLWU3MjgtNGYxZi04YTcwLWFlNjNlMmVjZmMyOCJ9', context: 'Scan company fundamentals, sector mix and performance signals in one focused market view.', category: 'Finance & investing' },
+      { title: 'Sales Dashboard', image: 'sales.png', url: 'https://public.tableau.com/views/Superstore-2021/Dashboard1?:showVizHome=no&:embed=true', context: 'Track sales, orders and product performance across categories and regions.', category: 'Commercial analytics' },
+      { title: 'Development Sector Dashboard', image: 'development-sector.png', url: 'https://public.tableau.com/views/Gender_Eq_ver2_0/Dashboard1?:showVizHome=no&:embed=true', context: 'Turn gender equality survey findings into a clear view of priorities and progress.', category: 'Development & impact' },
+      { title: 'Informative Dashboard', image: 'informative.png', url: 'https://public.tableau.com/views/volcanoes_1/Dashboard1?:showVizHome=no&:embed=true', context: 'Explore a global dataset through an engaging, geographic data story.', category: 'Data storytelling' },
+      { title: 'Public Sector Dashboard', image: 'public-health.png', url: 'https://public.tableau.com/views/Pollution_11/Dashboard1?:showVizHome=no&:embed=true', context: 'Make public data easier to interpret with location and pollutant level comparisons.', category: 'Public sector' },
+      { title: 'Nutrition Dashboard', image: 'nutrition.png', url: 'https://public.tableau.com/views/Food-TheBodyFuelIronViz2020/Dashboard2?:showVizHome=no&:embed=true', context: 'Present nutrition guidance and recommended intake across age groups.', category: 'Health & nutrition' },
+      { title: 'Public Health', image: 'public-health.png', url: 'https://public.tableau.com/views/COVID-19_JHU/World_Snap?:showVizHome=no&:embed=true', context: 'Explore global COVID-19 indicators in a public health view.', category: 'Public health' },
+      { title: 'Which Chart to Use When', image: 'chart-guide.png', url: 'https://app.powerbi.com/view?r=eyJrIjoiMzJlODlmM2UtNzg5OC00NjkxLTllODMtNWEwODJiYjQyZjZjIiwidCI6Ijc0MTdhZmNkLWU3MjgtNGYxZi04YTcwLWFlNjNlMmVjZmMyOCJ9', context: 'See how chart choices can make comparisons, patterns and relationships easier to understand.', category: 'Data visualization' },
+      { title: 'HR Analytics', image: 'hr-analytics.png', url: 'https://app.powerbi.com/view?r=eyJrIjoiNjFlZjE1NzUtMzg2OC00NjAzLWE1NzctNmFiYTk0MTgxNzk0IiwidCI6Ijc0MTdhZmNkLWU3MjgtNGYxZi04YTcwLWFlNjNlMmVjZmMyOCJ9', context: 'Explore workforce composition, headcount trends and employee demographics.', category: 'People analytics' },
+    ];
+    dashboards.forEach(function (dashboard) {
+      var card = createElement('article', 'dashboard-card reveal', '');
+      card.innerHTML = '<div class="dashboard-card__visual"><img src="assets/images/visualizations/' + escapeAttr(dashboard.image) + '" alt="' + escapeAttr(dashboard.title) + ' preview" loading="lazy"><span class="dashboard-card__view" aria-hidden="true">View dashboard <span>↗</span></span></div><div class="dashboard-card__body"><span class="dashboard-card__category">' + escapeHtml(dashboard.category) + '</span><h4>' + escapeHtml(dashboard.title) + '</h4><p>' + escapeHtml(dashboard.context) + '</p><button class="dashboard-open" type="button" data-dashboard-url="' + escapeAttr(dashboard.url) + '" data-dashboard-title="' + escapeAttr(dashboard.title) + '">Explore live dashboard <span aria-hidden="true">↗</span></button></div>';
+      grid.appendChild(card);
+    });
+    var dialog = document.getElementById('dashboard-dialog');
+    var frame = document.getElementById('dashboard-dialog-frame');
+    var title = document.getElementById('dashboard-dialog-title');
+    var external = document.getElementById('dashboard-dialog-external');
+    var closeButton = document.getElementById('dashboard-dialog-close');
+    if (dialog && frame) {
+      grid.addEventListener('click', function (event) {
+        var button = event.target.closest('.dashboard-open');
+        if (!button) return;
+        var url = button.getAttribute('data-dashboard-url');
+        title.textContent = button.getAttribute('data-dashboard-title');
+        frame.src = url;
+        external.href = url;
+        dialog.showModal();
+      });
+      closeButton.addEventListener('click', function () { dialog.close(); });
+      dialog.addEventListener('close', function () { frame.src = ''; });
+    }
   }
 
 

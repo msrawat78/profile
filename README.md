@@ -37,6 +37,8 @@ All website content lives in **`data/content.js`**. Edit that single file to cha
 - YouTube/content links
 - Contact information
 
+Set published dashboard embed URLs in **`data/visualization-links.js`**. The Interactive BI Showcase displays preview cards until a URL is added, then embeds the live visualization. Add actual YouTube video IDs and approved client testimonials to `data/content.js` before publishing those trust elements.
+
 The frontend reads from this data file and renders automatically — no HTML editing needed.
 
 ## How to Change Design

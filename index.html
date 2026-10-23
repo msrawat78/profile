@@ -34,7 +34,7 @@
   <!-- Favicon -->
   <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
 </head>
-<body>
+<body data-theme="dark">
 
   <!-- ============================================
        HEADER & NAVIGATION
@@ -42,6 +42,7 @@
   <header class="site-header" id="site-header">
     <nav class="site-nav container">
       <a class="nav__logo" href="#home" id="nav-logo" aria-label="Home">MSR</a>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light theme" title="Switch theme">☼</button>
       <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
         <span class="nav__toggle-bar"></span>
         <span class="nav__toggle-bar"></span>
@@ -62,13 +63,36 @@
       <div class="container hero__container">
         <div class="hero__content">
           <span class="hero__label" id="hero-title"></span>
-          <h1 class="hero__name" id="hero-name"></h1>
-          <p class="hero__headline" id="hero-headline"></p>
+          <h1 class="hero__headline" id="hero-headline"></h1>
+          <p class="hero__name" id="hero-name"></p>
           <p class="hero__subtext" id="hero-subtext"></p>
           <div class="hero__actions" id="hero-cta">
             <!-- JS populates CTA buttons -->
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="solution-finder" aria-labelledby="solution-finder-title">
+      <div class="container solution-finder__inner">
+        <div class="solution-finder__intro"><span class="showcase-eyebrow">Find your starting point</span><h2 id="solution-finder-title">What brings you here?</h2><p>Choose your context and priority to surface the most relevant ways to work together.</p></div>
+        <div class="solution-finder__filters" aria-label="Filter services and projects">
+          <div class="filter-group" role="group" aria-label="I am a">
+            <span class="filter-group__label">I am a…</span>
+            <button class="filter-chip is-active" type="button" data-filter-group="audience" data-filter-value="all" aria-pressed="true">Anyone</button>
+            <button class="filter-chip" type="button" data-filter-group="audience" data-filter-value="startup" aria-pressed="false">Startup founder</button>
+            <button class="filter-chip" type="button" data-filter-group="audience" data-filter-value="enterprise" aria-pressed="false">Enterprise leader</button>
+            <button class="filter-chip" type="button" data-filter-group="audience" data-filter-value="technical" aria-pressed="false">Technical team</button>
+          </div>
+          <div class="filter-group" role="group" aria-label="Looking for">
+            <span class="filter-group__label">I’m looking for…</span>
+            <button class="filter-chip is-active" type="button" data-filter-group="solution" data-filter-value="all" aria-pressed="true">Anything</button>
+            <button class="filter-chip" type="button" data-filter-group="solution" data-filter-value="ai" aria-pressed="false">AI &amp; automation</button>
+            <button class="filter-chip" type="button" data-filter-group="solution" data-filter-value="analytics" aria-pressed="false">Data analytics</button>
+            <button class="filter-chip" type="button" data-filter-group="solution" data-filter-value="training" aria-pressed="false">Corporate training</button>
+          </div>
+        </div>
+        <p class="solution-finder__status" id="solution-finder-status" aria-live="polite">Showing all services, training and projects</p>
       </div>
     </section>
 
@@ -120,6 +144,10 @@
         <div class="projects-grid" id="projects-grid">
           <!-- JS populates project cards -->
         </div>
+        <aside class="conversion-banner reveal">
+          <div><h3>Have a data bottleneck or AI integration challenge?</h3><p>Let’s map out a practical solution in a 20-minute strategy call.</p></div>
+          <a class="btn btn--primary" href="https://calendly.com/klaymatrix-support/30min" target="_blank" rel="noopener noreferrer">Schedule a Call</a>
+        </aside>
       </div>
     </section>
 
@@ -135,6 +163,23 @@
         <div class="built-grid" id="built-grid">
           <!-- JS populates built project cards -->
         </div>
+        <div class="showcase-heading reveal">
+          <span class="showcase-eyebrow">A selection of work</span>
+          <h3 class="showcase-title">Data, made useful.</h3>
+          <p>Explore dashboards and visual stories built to help teams see what matters and decide what to do next.</p>
+        </div>
+        <div class="dashboard-grid" id="dashboard-grid"></div>
+        <dialog class="dashboard-dialog" id="dashboard-dialog" aria-labelledby="dashboard-dialog-title">
+          <div class="dashboard-dialog__header">
+            <h3 id="dashboard-dialog-title">Live dashboard</h3>
+            <div class="dashboard-dialog__actions">
+              <a id="dashboard-dialog-external" href="#" target="_blank" rel="noopener noreferrer">Open in new tab ↗</a>
+              <button class="dashboard-dialog__close" id="dashboard-dialog-close" type="button" aria-label="Close dashboard">&times;</button>
+            </div>
+          </div>
+          <div class="dashboard-dialog__frame"><iframe id="dashboard-dialog-frame" title="Interactive dashboard" allowfullscreen loading="lazy"></iframe></div>
+        </dialog>
+        <div class="built-cta"><a class="btn btn--primary" href="#contact">Need something custom like this built for your internal workflows?</a></div>
       </div>
     </section>
 
@@ -213,7 +258,10 @@
     </div>
   </footer>
 
+  <div class="pipeline-ticker" role="status" aria-live="polite"><span class="pipeline-ticker__online"><i></i> ONLINE</span><span class="pipeline-ticker__log" id="pipeline-log">[READY] Exploring practical data and AI solutions</span><span class="pipeline-ticker__location">DATA · AI · ENABLEMENT</span></div>
+
   <!-- Scripts: Data first, then logic -->
+  <script src="data/visualization-links.js"></script>
   <script src="data/content.js"></script>
   <script src="js/main.js"></script>
 
