@@ -258,21 +258,34 @@ window.SITE_DATA = {
     items: [
       {
         title: "AI Resume Builder",
-        description: "A Streamlit-based application that helps professionals create polished, ATS-friendly resumes using AI assistance.",
+        description: "Create a resume from scratch or upload an existing one to refine it with AI. The app uses conversational assistance to help shape experience into a clear, polished resume.",
         label: "Production App",
-        tech: ["Python", "Streamlit", "LLM API"],
+        image: "project snippets/ai resume builder.png",
+        tech: ["Python", "Streamlit", "ChatGPT API", "Claude API"],
         demoUrl: "https://ai-resume-builder-manu.streamlit.app/",
         repoUrl: "https://github.com/msrawat78",  // UPDATE with specific repo URL if different
       },
-      // ADD MORE PROJECTS HERE as you build them
-      // {
-      //   title: "Project Name",
-      //   description: "What it does.",
-      //   label: "Prototype",  // or "Experiment", "Production App", "Tool"
-      //   tech: ["Tech1", "Tech2"],
-      //   demoUrl: "",
-      //   repoUrl: "",
-      // },
+      {
+        title: "Content Creator",
+        description: "Turn ideas into ready-to-share content in formats such as social carousels, cheatsheets, and learning roadmaps, using reusable HTML templates.",
+        label: "AI Content Tool",
+        image: "project snippets/content creator.png",
+        tech: ["Python", "HTML", "Jinja2 Templates"],
+      },
+      {
+        title: "DataVet",
+        description: "A lightweight data cleaning and transformation tool for preparing messy data. Regex-powered bulk cleaning helps apply consistent fixes across many values at once.",
+        label: "Data Tool",
+        image: "project snippets/datavet.png",
+        tech: ["Python", "Regular Expressions"],
+      },
+      {
+        title: "SportOps",
+        description: "A sports club booking app that helps manage member reservations and coordinate access to club activities.",
+        label: "Web App",
+        image: "project snippets/sportops.png",
+        tech: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Vercel"],
+      },
     ],
   },
 

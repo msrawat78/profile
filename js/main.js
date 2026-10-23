@@ -421,7 +421,12 @@
       }
       linksHtml += '</div>';
 
+      var imageHtml = item.image
+        ? '<div class="built-card__image"><img src="' + escapeAttr(item.image) + '" alt="' + escapeAttr(item.title) + ' screenshot" loading="lazy"></div>'
+        : '';
+
       card.innerHTML =
+        imageHtml +
         (item.label ? '<span class="built-card__label">' + escapeHtml(item.label) + '</span>' : '') +
         '<h3 class="built-card__title">' + escapeHtml(item.title) + '</h3>' +
         '<p class="built-card__desc">' + escapeHtml(item.description) + '</p>' +
