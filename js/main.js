@@ -606,25 +606,31 @@
       channelLink.href = ideasData.youtube.channelUrl;
       channelLink.target = '_blank';
       channelLink.rel = 'noopener noreferrer';
+      channelLink.setAttribute('aria-label', 'Subscribe to ' + ideasData.youtube.channelName + ' on YouTube');
       channelLink.innerHTML =
         '<span class="yt-icon">' + getIcon('youtube') + '</span>' +
-        '<span>' + escapeHtml(ideasData.youtube.channelName) + ' — YouTube Channel</span>';
+        '<span>Subscribe to ' + escapeHtml(ideasData.youtube.channelName) + ' on YouTube</span>';
       ytSection.appendChild(channelLink);
 
       // Featured videos
       if (ideasData.youtube.featuredVideos && ideasData.youtube.featuredVideos.length > 0) {
         var videosGrid = createElement('div', 'ideas__videos-grid', '');
         ideasData.youtube.featuredVideos.forEach(function (video) {
-          var card = createElement('div', 'card', '');
-          card.innerHTML =
-            '<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:var(--border-radius-sm);">' +
-              '<iframe src="https://www.youtube.com/embed/' + escapeAttr(video.videoId) + '" ' +
-              'style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" ' +
-              'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ' +
-              'allowfullscreen loading="lazy" title="' + escapeAttr(video.title) + '"></iframe>' +
-            '</div>' +
-            '<h4 style="margin-top:var(--space-md);font-size:var(--text-base);">' + escapeHtml(video.title) + '</h4>' +
-            (video.description ? '<p style="font-size:var(--text-sm);color:var(--color-text-secondary);">' + escapeHtml(video.description) + '</p>' : '');
+          var card = createElement('article', 'ideas__video-card', '');
+          var videoUrl = video.videoUrl || ('https://www.youtube.com/watch?v=' + encodeURIComponent(video.videoId));
+          var videoVisual = video.thumbnail
+            ? '<a class="ideas__video-link" href="' + escapeAttr(videoUrl) + '" target="_blank" rel="noopener noreferrer" aria-label="Watch ' + escapeAttr(video.title) + ' on YouTube">' +
+                '<img src="' + escapeAttr(video.thumbnail) + '" alt="' + escapeAttr(video.title) + ' video thumbnail" loading="lazy">' +
+                '<span class="ideas__video-play" aria-hidden="true"><span>▶</span><small>Watch video</small></span>' +
+              '</a>'
+            : '<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:var(--border-radius-sm);">' +
+                '<iframe src="https://www.youtube.com/embed/' + escapeAttr(video.videoId) + '" ' +
+                'style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" ' +
+                'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ' +
+                'allowfullscreen loading="lazy" title="' + escapeAttr(video.title) + '"></iframe>' +
+              '</div>';
+          card.innerHTML = videoVisual + '<h4 class="ideas__video-title">' + escapeHtml(video.title) + '</h4>' +
+            (video.description ? '<p class="ideas__video-description">' + escapeHtml(video.description) + '</p>' : '');
           videosGrid.appendChild(card);
         });
         ytSection.appendChild(videosGrid);

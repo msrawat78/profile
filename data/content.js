@@ -451,11 +451,36 @@ window.SITE_DATA = {
       channelUrl: "https://youtube.com/@DatasciencewithManu",
       // Featured videos — add YouTube video IDs or full URLs
       featuredVideos: [
-        // {
-        //   title: "Video Title",
-        //   videoId: "YOUTUBE_VIDEO_ID",  // e.g., "dQw4w9WgXcQ"
-        //   description: "Brief description of what the video covers.",
-        // },
+        {
+          title: "Project Demo",
+          videoId: "QvMDDkiLDVE",
+          videoUrl: "https://youtu.be/QvMDDkiLDVE?si=9rnA2YbR3f5Nvpi5",
+          thumbnail: "https://img.youtube.com/vi/QvMDDkiLDVE/hqdefault.jpg",
+        },
+        {
+          title: "Video 2",
+          videoId: "DAEererizrE",
+          videoUrl: "https://youtu.be/DAEererizrE?si=mdweAZejxrXVlr1F",
+          thumbnail: "https://img.youtube.com/vi/DAEererizrE/hqdefault.jpg",
+        },
+        {
+          title: "Video 3",
+          videoId: "hN5Q2bve3n4",
+          videoUrl: "https://youtu.be/hN5Q2bve3n4?si=1SDihtn1NTybPi1O",
+          thumbnail: "https://img.youtube.com/vi/hN5Q2bve3n4/hqdefault.jpg",
+        },
+        {
+          title: "Video 4",
+          videoId: "ia8azRsoOfo",
+          videoUrl: "https://youtu.be/ia8azRsoOfo?si=sSJH55lUaS6nbOTI",
+          thumbnail: "https://img.youtube.com/vi/ia8azRsoOfo/hqdefault.jpg",
+        },
+        {
+          title: "Video 5",
+          videoId: "_QE4mAaq2Uo",
+          videoUrl: "https://youtu.be/_QE4mAaq2Uo?si=buUn6wJGCdFuVBCK",
+          thumbnail: "https://img.youtube.com/vi/_QE4mAaq2Uo/hqdefault.jpg",
+        },
       ],
     },
     // Articles, blog posts, or other content
